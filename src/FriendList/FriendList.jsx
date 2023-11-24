@@ -1,11 +1,21 @@
-const FriendList = (object) => {
-    return object.friends.map(({id, avatar, name, isOnline}) => (
-            <li className="item" key={id}>
-                {isOnline ? (<span className="status-on"></span>) : (<span className="status-off"></span>)}
-                <img className="avatar" src={avatar} alt="User avatar" width="48" />
-                <p className="name">{name}</p>
-            </li>
+import FriendListItem from "./FriendListItem";
+
+const FriendList = ({ friends }) => {
+
+    const resultFriends = friends.map(({id, avatar, name, isOnline}) =>  (
+         <ul className="friend-list" key={id}>
+                <FriendListItem
+                    avatar={avatar}
+                    name={name}
+                    isOnline={isOnline}
+                />
+         </ul>
     ))
+    
+    return (
+        <section className="friends">
+            {resultFriends}
+        </section>)
 }
 
 export default FriendList;
