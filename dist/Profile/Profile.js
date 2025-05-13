@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+const Profile = ({ username, tag, location, avatar, stats, }) => {
+    return ((0, jsx_runtime_1.jsxs)("div", { className: "profile", children: [(0, jsx_runtime_1.jsxs)("div", { className: "description", children: [(0, jsx_runtime_1.jsx)("img", { src: avatar, alt: "User avatar", className: "avatar" }), (0, jsx_runtime_1.jsx)("p", { className: "name", children: username }), (0, jsx_runtime_1.jsxs)("p", { className: "tag", children: ["@", tag] }), (0, jsx_runtime_1.jsx)("p", { className: "location", children: location })] }), (0, jsx_runtime_1.jsxs)("ul", { className: "stats", children: [(0, jsx_runtime_1.jsxs)("li", { children: [(0, jsx_runtime_1.jsx)("span", { className: "label", children: "Followers" }), (0, jsx_runtime_1.jsx)("span", { className: "quantity", children: stats.followers })] }), (0, jsx_runtime_1.jsxs)("li", { children: [(0, jsx_runtime_1.jsx)("span", { className: "label", children: "Views" }), (0, jsx_runtime_1.jsx)("span", { className: "quantity", children: stats.views })] }), (0, jsx_runtime_1.jsxs)("li", { children: [(0, jsx_runtime_1.jsx)("span", { className: "label", children: "Likes" }), (0, jsx_runtime_1.jsx)("span", { className: "quantity", children: stats.likes })] })] })] }));
+};
+exports.default = Profile;
+//# sourceMappingURL=Profile.js.map
